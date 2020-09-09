@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var label: UILabel!
+    @IBOutlet var hanteiLabel: UILabel!
     
     //小数点も表示
     var count: Float = 0.0
@@ -33,6 +34,8 @@ class ViewController: UIViewController {
         if timer.isValid {
             //タイマーが動いていたら止める
             timer.invalidate()
+            //メソッドの呼び出し
+            self.hantei()
         }
     }
     
@@ -50,6 +53,18 @@ class ViewController: UIViewController {
         count = count + 0.01
         //小数点以下2桁まで表示
         label.text = String(format: "%.2f", count)
+    }
+    
+    func hantei() {
+        if count > 9.80 && count < 10.20 {
+            hanteiLabel.text = "PERFECT!"
+        } else if count > 9.70 && count < 10.30 {
+            hanteiLabel.text = "GREAT!"
+        } else if count > 9.60 && count < 10.40 {
+            hanteiLabel.text = "GOOD!"
+        } else {
+            hanteiLabel.text = "BAD!"
+        }
     }
 
 

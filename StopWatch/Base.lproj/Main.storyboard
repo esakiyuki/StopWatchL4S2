@@ -46,11 +46,19 @@
                                     <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="wO4-Lb-hrr"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-4m-dXf">
+                                <rect key="frame" x="149" y="217" width="119" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hanteiLabel" destination="E1f-4m-dXf" id="RTu-W7-f04"/>
                         <outlet property="label" destination="Hoq-40-3Yu" id="YUx-8e-tFr"/>
                     </connections>
                 </viewController>
